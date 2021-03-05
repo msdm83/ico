@@ -57,11 +57,15 @@
 }
 .invest {
   display: flex;
+  counter-reset: section; 
 }
 .invest li {
   width: 200px;
   height: 300px;
   padding: 20px;
-  border: 1px solid red;
-  outline: 20px;
+  outline: 1px solid red;
+}
+.invest li:before{
+  counter-increment: section;
+  content: counter(section)"  ";
 }
